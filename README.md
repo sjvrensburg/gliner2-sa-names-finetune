@@ -44,9 +44,12 @@ the contexts and name groups that already work.**
      model doesn't start over-triggering on "name" for everything in an address block.
 
 2. **Fine-tune with LoRA.**
-   - Start from `SemplificaAI/gliner2-privacy-filter-PII-multi` — the checkpoint privacy-ext
-     actually ships — not the bare `fastino/gliner2-base-v1`. Starting from the base model
-     would lose the existing PII tuning.
+   - Start from `fastino/gliner2-privacy-filter-PII-multi` (PyTorch, trainable) — the
+     upstream checkpoint privacy-ext's ONNX fragments were exported from — not the bare
+     `fastino/gliner2-base-v1`. Starting from the base model would lose the existing PII
+     tuning. Note: `SemplificaAI/gliner2-privacy-filter-PII-multi` (what privacy-ext's Rust
+     server downloads at runtime) only hosts the ONNX export fragments, not a trainable
+     checkpoint — `GLiNER2.from_pretrained` on it 404s.
    - Use `gliner2.training.trainer.GLiNER2Trainer` + `TrainingConfig(use_lora=True, ...)`.
      LoRA checkpoints save already-merged weights, ready for export — no separate merge step.
    - Start with `lora_target_modules=["encoder"]` — the failure is pure recall-without-cue,
