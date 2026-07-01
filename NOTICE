@@ -1,0 +1,7 @@
+This repository is licensed under the Apache License 2.0 (see LICENSE).
+
+scripts/export_gliner2_onnx_fragments_v2.py is vendored verbatim from
+SemplificaAI/gliner2-rs (https://github.com/SemplificaAI/gliner2-rs), also Apache-2.0.
+
+eval/sa_names_eval_gen.py and eval/run_sa_names_eval.py originated in the privacy-ext
+project (https://github.com/sjvrensburg/privacy-ext).

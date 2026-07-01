@@ -1,0 +1,12 @@
+*.onnx
+*.onnx.data
+data/*.jsonl
+eval/sa_names_eval.jsonl
+eval/sa_names_eval_results.json
+__pycache__/
+*.pyc
+.venv/
+venv/
+sa_names_lora/
+onnx_out/
+wandb/
