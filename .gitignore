@@ -1,5 +1,7 @@
 *.onnx
 *.onnx.data
+data/raw/
+data/pools/
 data/*.jsonl
 eval/sa_names_eval.jsonl
 eval/sa_names_eval_results.json
