@@ -1,6 +1,11 @@
 import json
+import random
+from pathlib import Path
 
-NAMES = {
+# Fallback list used only if data/pools/eval/ (built by scripts/corpus/split_eval_holdout.py)
+# isn't present -- this was the original ~40-name first pass, kept as a bootstrap so this
+# script still runs standalone before the corpus pipeline has ever been executed.
+FALLBACK_NAMES = {
     "isiZulu": ["Nomvula Mahlangu", "Thabo Nkosi", "Sipho Zungu", "Bongani Ndlovu",
                 "Lindiwe Khumalo", "Nokuthula Mkhize", "Mandla Buthelezi", "Zanele Cele"],
     "isiXhosa": ["Sibusiso Ngcobo", "Ayanda Xulu", "Anele Mgcina", "Lithemba Sonjica",
@@ -14,6 +19,32 @@ NAMES = {
     "Western_control": ["John Smith", "Maria Garcia", "David Johnson", "Emma Wilson",
                         "Wei Chen", "Fatima Al-Sayed"],
 }
+
+# Cap names sampled per group so total case count (names x contexts) stays a manageable
+# eval run, even though the held-out pools can have hundreds of real names per group.
+NAMES_PER_GROUP = 40
+EVAL_POOLS_DIR = Path(__file__).resolve().parent.parent / "data" / "pools" / "eval"
+
+
+def load_names() -> dict[str, list[str]]:
+    names = {}
+    rng = random.Random(42)
+    for group in FALLBACK_NAMES:
+        pool_path = EVAL_POOLS_DIR / f"names_{group}.txt"
+        if pool_path.exists():
+            pool = [line.strip() for line in pool_path.read_text().splitlines() if line.strip()]
+            if pool:
+                sample = pool if len(pool) <= NAMES_PER_GROUP else rng.sample(pool, NAMES_PER_GROUP)
+                names[group] = sorted(sample)
+                continue
+        print(f"[warn] no eval-holdout pool for {group} at {pool_path} -- "
+              f"falling back to the small hardcoded list; run scripts/corpus/fetch_sources.py "
+              f"+ extract_pools.py + split_eval_holdout.py for the real held-out eval set")
+        names[group] = FALLBACK_NAMES[group]
+    return names
+
+
+NAMES = load_names()
 
 CONTEXTS = {
     "cue_explicit":    "Hi, my name is {name} and I'd like to schedule an appointment for next week.",

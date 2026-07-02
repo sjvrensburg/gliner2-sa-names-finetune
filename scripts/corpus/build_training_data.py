@@ -18,6 +18,7 @@ from pathlib import Path
 from synth import fake_email, fake_id_num, fake_phone, fake_street_address, fake_url, fake_username
 
 DATA_POOLS = Path(__file__).resolve().parents[2] / "data" / "pools"
+DATA_POOLS_TRAIN = DATA_POOLS / "train"  # names only -- see split_eval_holdout.py
 DATA_DIR = Path(__file__).resolve().parents[2] / "data"
 
 GROUPS = [
@@ -134,7 +135,11 @@ def main() -> None:
 
     group_pools = {}
     for group in GROUPS:
-        names = load_pool(DATA_POOLS / f"names_{group}.txt")
+        # Train-only names slice (excludes eval/sa_names_eval_gen.py's held-out names --
+        # see split_eval_holdout.py); falls back to the full pool for groups it doesn't
+        # cover (e.g. Siswati), or if the split hasn't been run yet.
+        train_names_path = DATA_POOLS_TRAIN / f"names_{group}.txt"
+        names = load_pool(train_names_path) or load_pool(DATA_POOLS / f"names_{group}.txt")
         places = load_pool(DATA_POOLS / f"places_{group}.txt")
         if not names:
             print(f"[warn] no names pool for {group} -- run extract_pools.py first, skipping group")

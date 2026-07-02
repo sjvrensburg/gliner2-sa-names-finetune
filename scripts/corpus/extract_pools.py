@@ -49,7 +49,7 @@ _NAME_PREFIX_RE = re.compile(
 # Titles/honorifics annotators included inside PERSON spans -- strip as leading tokens.
 HONORIFICS = {
     "mr", "mrs", "ms", "dr", "prof", "adv", "rev", "cllr", "hon", "chief", "kgosi",
-    "nkosi", "mnu", "mme", "ngaka", "gr", "ugqr", "kgs", "mnr", "nkosikazi",
+    "nkosi", "mnu", "mme", "ngaka", "gr", "gq", "ugqr", "kgs", "mnr", "nkosikazi",
     "nkosaz", "inkhosi", "inkosi", "king", "queen", "kgosigadi",
 }
 
@@ -65,8 +65,15 @@ TITLE_WORDS = {
     "moporof", "mongameli", "bawo", "baw", "speaker", "judge", "justice", "regter",
     "advokaat", "governor", "goewerneur", "mayor", "burgemeester", "councillor",
     "raadslid", "molaodi", "molaodimogolo", "premiersvrou", "nasionale",
-    "provinsiale",
+    "provinsiale", "specialist", "consultant", "manager", "director", "officer",
+    "coordinator", "administrator", "supervisor", "assistant", "representative",
+    "advisor", "adviser", "controller", "analyst", "engineer", "technician",
 }
+
+# Title-word STEMS matched as a prefix rather than a whole word, for compounds Afrikaans
+# regularly builds this way (e.g. "Hoofbedryfsbeampte" = "Chief Operating Officer",
+# "Hoofuitvoerende" = "Chief Executive").
+TITLE_STEMS = ("hoof", "beampte")
 
 # Lowercase connector words allowed inside an otherwise-Titlecase name (surname particles,
 # royal-name "of", etc.) -- anything else lowercase inside a name/place is treated as a
@@ -109,6 +116,8 @@ def _looks_like_proper_noun(entry: str, require_leading_upper: bool) -> bool:
         if not core:
             return False
         if core.lower() in TITLE_WORDS:
+            return False
+        if any(core.lower().startswith(stem) for stem in TITLE_STEMS):
             return False
         if core.lower() in LOWERCASE_PARTICLES:
             continue
