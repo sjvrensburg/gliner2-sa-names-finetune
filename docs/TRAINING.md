@@ -25,7 +25,12 @@ from gliner2.training.trainer import GLiNER2Trainer, TrainingConfig
 
 # Fine-tune FROM the deployed checkpoint, not the bare base model —
 # otherwise you lose the existing PII-specific tuning.
-model = GLiNER2.from_pretrained("SemplificaAI/gliner2-privacy-filter-PII-multi")
+#
+# NOTE: SemplificaAI/gliner2-privacy-filter-PII-multi (the repo privacy-ext's Rust
+# server downloads from) only hosts ONNX export fragments -- no config.json / trainable
+# weights, so `from_pretrained` on it 404s. The trainable PyTorch checkpoint is the
+# upstream model that ONNX repo was exported from:
+model = GLiNER2.from_pretrained("fastino/gliner2-privacy-filter-PII-multi")
 
 config = TrainingConfig(
     output_dir="./sa_names_lora",

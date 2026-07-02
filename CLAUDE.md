@@ -4,11 +4,13 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## What this repo is
 
-A task scaffold for fine-tuning `SemplificaAI/gliner2-privacy-filter-PII-multi` (GLiNER2-PII,
-the on-device PII model used by [privacy-ext](https://github.com/sjvrensburg/privacy-ext)) to
-fix a measured recall gap on South African names in cue-free, label-style text (address/attn
-lines). As of the initial scaffold, only docs, an eval generator/runner, and a vendored ONNX
-export script exist — the training corpus and fine-tuning script itself are not yet built.
+A task scaffold for fine-tuning GLiNER2-PII (deployed as
+`SemplificaAI/gliner2-privacy-filter-PII-multi`, the on-device PII model used by
+[privacy-ext](https://github.com/sjvrensburg/privacy-ext)) to fix a measured recall gap on
+South African names in cue-free, label-style text (address/attn lines). `scripts/corpus/`
+builds the training corpus (fetch real NER corpora -> extract/clean name+place pools ->
+generate templated examples -> validate/split); the LoRA fine-tune itself
+(`docs/TRAINING.md`) and ONNX export are the remaining steps.
 
 Read `README.md` first — it has the full problem statement, task outline, and repo layout.
 The `docs/` files it links to contain the actual implementation guidance (data sources, JSONL
@@ -18,8 +20,11 @@ still evolving.
 
 ## Key constraints (don't relitigate these)
 
-- Fine-tune **from** `SemplificaAI/gliner2-privacy-filter-PII-multi`, never from the bare
-  `fastino/gliner2-base-v1` — starting from base loses the existing PII tuning.
+- Fine-tune **from** `fastino/gliner2-privacy-filter-PII-multi` (the trainable PyTorch
+  checkpoint), never from the bare `fastino/gliner2-base-v1` — starting from base loses the
+  existing PII tuning. Note `SemplificaAI/gliner2-privacy-filter-PII-multi` (what
+  privacy-ext's Rust server downloads) is an ONNX-only export of that same checkpoint with
+  no trainable weights — `GLiNER2.from_pretrained` on it 404s.
 - Use LoRA (`gliner2.training.trainer.GLiNER2Trainer` + `TrainingConfig(use_lora=True, ...)`),
   starting with `lora_target_modules=["encoder"]` only. Widen incrementally
   (`+span_rep` → `+classifier` → full default) only if eval shows it's needed — see
