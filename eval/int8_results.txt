@@ -1,0 +1,34 @@
+=== Recall by name group ===
+  isiZulu                detected=275/280 (98.2%)  exact-span=271/280
+  Sesotho_Setswana       detected=279/280 (99.6%)  exact-span=275/280
+  Afrikaans              detected=279/280 (99.6%)  exact-span=272/280
+  isiXhosa               detected=280/280 (100.0%)  exact-span=277/280
+  Tshivenda_Xitsonga     detected= 91/ 91 (100.0%)  exact-span=91/91
+  Western_control        detected=280/280 (100.0%)  exact-span=272/280
+
+=== Recall by context ===
+  address_attn       detected=209/213 (98.1%)  exact-span=208/213
+  email_sig          detected=211/213 (99.1%)  exact-span=191/213
+  billing            detected=212/213 (99.5%)  exact-span=211/213
+  cue_explicit       detected=213/213 (100.0%)  exact-span=212/213
+  form_field         detected=213/213 (100.0%)  exact-span=212/213
+  narrative_no_cue   detected=213/213 (100.0%)  exact-span=212/213
+  third_person       detected=213/213 (100.0%)  exact-span=212/213
+
+=== Worst (group, context) cells (< 100% detected) ===
+  isiZulu                / address_attn       detected=38/40 (95%)
+  isiZulu                / email_sig          detected=38/40 (95%)
+  isiZulu                / billing            detected=39/40 (98%)
+  Sesotho_Setswana       / address_attn       detected=39/40 (98%)
+  Afrikaans              / address_attn       detected=39/40 (98%)
+
+=== Individual misses ===
+  MISS  [isiZulu                / billing         ] 'UJenny'               in: 'Invoice #4471 billed to UJenny - payment overdue.'
+  MISS  [isiZulu                / address_attn    ] 'UJenny'               in: 'Attn: UJenny, Unit 4B, Soweto. Please call before delivery.'
+  MISS  [isiZulu                / email_sig       ] 'UJenny'               in: 'Kind regards,\nUJenny\nSenior Consultant'
+  MISS  [isiZulu                / address_attn    ] 'UKhomishane Wesiteshi' in: 'Attn: UKhomishane Wesiteshi, Unit 4B, Soweto. Please call before delivery.'
+  MISS  [isiZulu                / email_sig       ] 'USiphelelo'           in: 'Kind regards,\nUSiphelelo\nSenior Consultant'
+  MISS  [Sesotho_Setswana       / address_attn    ] 'Jonase'               in: 'Attn: Jonase, Unit 4B, Soweto. Please call before delivery.'
+  MISS  [Afrikaans              / address_attn    ] "Uys.'n"               in: "Attn: Uys.'n, Unit 4B, Soweto. Please call before delivery."
+
+Overall: 1484/1491 (99.5%) recall, 1458/1491 exact-span

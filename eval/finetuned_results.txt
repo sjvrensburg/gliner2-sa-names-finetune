@@ -1,0 +1,32 @@
+=== Recall by name group ===
+  Afrikaans              detected=275/280 (98.2%)  exact-span=275/280
+  isiZulu                detected=280/280 (100.0%)  exact-span=280/280
+  isiXhosa               detected=280/280 (100.0%)  exact-span=280/280
+  Sesotho_Setswana       detected=280/280 (100.0%)  exact-span=280/280
+  Tshivenda_Xitsonga     detected= 91/ 91 (100.0%)  exact-span=91/91
+  Western_control        detected=280/280 (100.0%)  exact-span=273/280
+
+=== Recall by context ===
+  cue_explicit       detected=212/213 (99.5%)  exact-span=211/213
+  form_field         detected=212/213 (99.5%)  exact-span=211/213
+  email_sig          detected=212/213 (99.5%)  exact-span=211/213
+  narrative_no_cue   detected=212/213 (99.5%)  exact-span=211/213
+  third_person       detected=212/213 (99.5%)  exact-span=211/213
+  billing            detected=213/213 (100.0%)  exact-span=212/213
+  address_attn       detected=213/213 (100.0%)  exact-span=212/213
+
+=== Worst (group, context) cells (< 100% detected) ===
+  Afrikaans              / cue_explicit       detected=39/40 (98%)
+  Afrikaans              / form_field         detected=39/40 (98%)
+  Afrikaans              / email_sig          detected=39/40 (98%)
+  Afrikaans              / narrative_no_cue   detected=39/40 (98%)
+  Afrikaans              / third_person       detected=39/40 (98%)
+
+=== Individual misses ===
+  MISS  [Afrikaans              / cue_explicit    ] "Uys.'n"               in: "Hi, my name is Uys.'n and I'd like to schedule an appointment for next week."
+  MISS  [Afrikaans              / form_field      ] "Uys.'n"               in: "Full Name: Uys.'n"
+  MISS  [Afrikaans              / email_sig       ] "Uys.'n"               in: "Kind regards,\nUys.'n\nSenior Consultant"
+  MISS  [Afrikaans              / narrative_no_cue] "Uys.'n"               in: "Uys.'n arrived at the office around 9am and left the documents at reception."
+  MISS  [Afrikaans              / third_person    ] "Uys.'n"               in: "The parcel was collected by Uys.'n on Tuesday afternoon."
+
+Overall: 1486/1491 (99.7%) recall, 1479/1491 exact-span

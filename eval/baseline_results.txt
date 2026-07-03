@@ -1,0 +1,260 @@
+=== Recall by name group ===
+  isiZulu                detected=214/280 (76.4%)  exact-span=204/280
+  isiXhosa               detected=226/280 (80.7%)  exact-span=220/280
+  Sesotho_Setswana       detected=238/280 (85.0%)  exact-span=234/280
+  Afrikaans              detected=239/280 (85.4%)  exact-span=233/280
+  Tshivenda_Xitsonga     detected= 85/ 91 (93.4%)  exact-span=85/91
+  Western_control        detected=272/280 (97.1%)  exact-span=260/280
+
+=== Recall by context ===
+  address_attn       detected=103/213 (48.4%)  exact-span=101/213
+  email_sig          detected=125/213 (58.7%)  exact-span=100/213
+  form_field         detected=207/213 (97.2%)  exact-span=206/213
+  narrative_no_cue   detected=209/213 (98.1%)  exact-span=204/213
+  cue_explicit       detected=210/213 (98.6%)  exact-span=209/213
+  billing            detected=210/213 (98.6%)  exact-span=208/213
+  third_person       detected=210/213 (98.6%)  exact-span=208/213
+
+=== Worst (group, context) cells (< 100% detected) ===
+  isiZulu                / address_attn       detected=10/40 (25%)
+  isiXhosa               / address_attn       detected=11/40 (28%)
+  isiXhosa               / email_sig          detected=15/40 (38%)
+  Sesotho_Setswana       / address_attn       detected=16/40 (40%)
+  isiZulu                / email_sig          detected=17/40 (42%)
+  Afrikaans              / address_attn       detected=20/40 (50%)
+  Sesotho_Setswana       / email_sig          detected=22/40 (55%)
+  Afrikaans              / email_sig          detected=25/40 (62%)
+  Tshivenda_Xitsonga     / address_attn       detected=9/13 (69%)
+  Tshivenda_Xitsonga     / email_sig          detected=11/13 (85%)
+  Western_control        / email_sig          detected=35/40 (88%)
+  isiZulu                / billing            detected=37/40 (92%)
+  isiZulu                / form_field         detected=37/40 (92%)
+  isiZulu                / narrative_no_cue   detected=37/40 (92%)
+  Afrikaans              / form_field         detected=37/40 (92%)
+  Western_control        / address_attn       detected=37/40 (92%)
+  isiZulu                / cue_explicit       detected=38/40 (95%)
+  isiZulu                / third_person       detected=38/40 (95%)
+  Afrikaans              / cue_explicit       detected=39/40 (98%)
+  Afrikaans              / narrative_no_cue   detected=39/40 (98%)
+  Afrikaans              / third_person       detected=39/40 (98%)
+
+=== Individual misses ===
+  MISS  [isiZulu                / address_attn    ] 'Alonso'               in: 'Attn: Alonso, Unit 4B, Soweto. Please call before delivery.'
+  MISS  [isiZulu                / email_sig       ] 'Alonso'               in: 'Kind regards,\nAlonso\nSenior Consultant'
+  MISS  [isiZulu                / address_attn    ] 'Baker-Hamilton'       in: 'Attn: Baker-Hamilton, Unit 4B, Soweto. Please call before delivery.'
+  MISS  [isiZulu                / email_sig       ] 'Baker-Hamilton'       in: 'Kind regards,\nBaker-Hamilton\nSenior Consultant'
+  MISS  [isiZulu                / address_attn    ] 'Benade'               in: 'Attn: Benade, Unit 4B, Soweto. Please call before delivery.'
+  MISS  [isiZulu                / address_attn    ] 'Berg'                 in: 'Attn: Berg, Unit 4B, Soweto. Please call before delivery.'
+  MISS  [isiZulu                / address_attn    ] 'Bushmen'              in: 'Attn: Bushmen, Unit 4B, Soweto. Please call before delivery.'
+  MISS  [isiZulu                / address_attn    ] 'Chikez Diemu'         in: 'Attn: Chikez Diemu, Unit 4B, Soweto. Please call before delivery.'
+  MISS  [isiZulu                / address_attn    ] 'Gold'                 in: 'Attn: Gold, Unit 4B, Soweto. Please call before delivery.'
+  MISS  [isiZulu                / address_attn    ] 'Gomomo'               in: 'Attn: Gomomo, Unit 4B, Soweto. Please call before delivery.'
+  MISS  [isiZulu                / email_sig       ] 'Gomomo'               in: 'Kind regards,\nGomomo\nSenior Consultant'
+  MISS  [isiZulu                / address_attn    ] 'Gxabhashe'            in: 'Attn: Gxabhashe, Unit 4B, Soweto. Please call before delivery.'
+  MISS  [isiZulu                / email_sig       ] 'Gxabhashe'            in: 'Kind regards,\nGxabhashe\nSenior Consultant'
+  MISS  [isiZulu                / address_attn    ] 'Harper'               in: 'Attn: Harper, Unit 4B, Soweto. Please call before delivery.'
+  MISS  [isiZulu                / address_attn    ] 'Haskin'               in: 'Attn: Haskin, Unit 4B, Soweto. Please call before delivery.'
+  MISS  [isiZulu                / email_sig       ] 'Haskin'               in: 'Kind regards,\nHaskin\nSenior Consultant'
+  MISS  [isiZulu                / address_attn    ] 'Khomako'              in: 'Attn: Khomako, Unit 4B, Soweto. Please call before delivery.'
+  MISS  [isiZulu                / address_attn    ] 'Kumlunganisi'         in: 'Attn: Kumlunganisi, Unit 4B, Soweto. Please call before delivery.'
+  MISS  [isiZulu                / email_sig       ] 'Kumlunganisi'         in: 'Kind regards,\nKumlunganisi\nSenior Consultant'
+  MISS  [isiZulu                / address_attn    ] 'Labious'              in: 'Attn: Labious, Unit 4B, Soweto. Please call before delivery.'
+  MISS  [isiZulu                / email_sig       ] 'Labious'              in: 'Kind regards,\nLabious\nSenior Consultant'
+  MISS  [isiZulu                / address_attn    ] 'Loots'                in: 'Attn: Loots, Unit 4B, Soweto. Please call before delivery.'
+  MISS  [isiZulu                / address_attn    ] 'Lwezwe'               in: 'Attn: Lwezwe, Unit 4B, Soweto. Please call before delivery.'
+  MISS  [isiZulu                / email_sig       ] 'Lwezwe'               in: 'Kind regards,\nLwezwe\nSenior Consultant'
+  MISS  [isiZulu                / address_attn    ] 'Madiba'               in: 'Attn: Madiba, Unit 4B, Soweto. Please call before delivery.'
+  MISS  [isiZulu                / email_sig       ] 'Madiba'               in: 'Kind regards,\nMadiba\nSenior Consultant'
+  MISS  [isiZulu                / address_attn    ] 'Malibongwe'           in: 'Attn: Malibongwe, Unit 4B, Soweto. Please call before delivery.'
+  MISS  [isiZulu                / email_sig       ] 'Malibongwe'           in: 'Kind regards,\nMalibongwe\nSenior Consultant'
+  MISS  [isiZulu                / address_attn    ] 'Mdali'                in: 'Attn: Mdali, Unit 4B, Soweto. Please call before delivery.'
+  MISS  [isiZulu                / email_sig       ] 'Mdali'                in: 'Kind regards,\nMdali\nSenior Consultant'
+  MISS  [isiZulu                / address_attn    ] 'Menenja Wezezimali'   in: 'Attn: Menenja Wezezimali, Unit 4B, Soweto. Please call before delivery.'
+  MISS  [isiZulu                / email_sig       ] 'Menenja Wezezimali'   in: 'Kind regards,\nMenenja Wezezimali\nSenior Consultant'
+  MISS  [isiZulu                / email_sig       ] 'Mfundisi Bukhosini'   in: 'Kind regards,\nMfundisi Bukhosini\nSenior Consultant'
+  MISS  [isiZulu                / address_attn    ] 'Moodley'              in: 'Attn: Moodley, Unit 4B, Soweto. Please call before delivery.'
+  MISS  [isiZulu                / address_attn    ] 'Mushwana'             in: 'Attn: Mushwana, Unit 4B, Soweto. Please call before delivery.'
+  MISS  [isiZulu                / email_sig       ] 'Mushwana'             in: 'Kind regards,\nMushwana\nSenior Consultant'
+  MISS  [isiZulu                / address_attn    ] 'Ngqongqoshe Zwelonke' in: 'Attn: Ngqongqoshe Zwelonke, Unit 4B, Soweto. Please call before delivery.'
+  MISS  [isiZulu                / email_sig       ] 'Ngqongqoshe Zwelonke' in: 'Kind regards,\nNgqongqoshe Zwelonke\nSenior Consultant'
+  MISS  [isiZulu                / email_sig       ] 'Pahad'                in: 'Kind regards,\nPahad\nSenior Consultant'
+  MISS  [isiZulu                / address_attn    ] 'Sekela Ngqongqoshe De' in: 'Attn: Sekela Ngqongqoshe De, Unit 4B, Soweto. Please call before delivery.'
+  MISS  [isiZulu                / email_sig       ] 'Sekela Ngqongqoshe De' in: 'Kind regards,\nSekela Ngqongqoshe De\nSenior Consultant'
+  MISS  [isiZulu                / address_attn    ] 'Shange'               in: 'Attn: Shange, Unit 4B, Soweto. Please call before delivery.'
+  MISS  [isiZulu                / email_sig       ] 'Shange'               in: 'Kind regards,\nShange\nSenior Consultant'
+  MISS  [isiZulu                / address_attn    ] 'Sledge'               in: 'Attn: Sledge, Unit 4B, Soweto. Please call before delivery.'
+  MISS  [isiZulu                / email_sig       ] 'Sledge'               in: 'Kind regards,\nSledge\nSenior Consultant'
+  MISS  [isiZulu                / billing         ] 'UDr'                  in: 'Invoice #4471 billed to UDr - payment overdue.'
+  MISS  [isiZulu                / address_attn    ] 'UDr'                  in: 'Attn: UDr, Unit 4B, Soweto. Please call before delivery.'
+  MISS  [isiZulu                / form_field      ] 'UDr'                  in: 'Full Name: UDr'
+  MISS  [isiZulu                / email_sig       ] 'UDr'                  in: 'Kind regards,\nUDr\nSenior Consultant'
+  MISS  [isiZulu                / narrative_no_cue] 'UDr'                  in: 'UDr arrived at the office around 9am and left the documents at reception.'
+  MISS  [isiZulu                / cue_explicit    ] 'UJenny'               in: "Hi, my name is UJenny and I'd like to schedule an appointment for next week."
+  MISS  [isiZulu                / billing         ] 'UJenny'               in: 'Invoice #4471 billed to UJenny - payment overdue.'
+  MISS  [isiZulu                / address_attn    ] 'UJenny'               in: 'Attn: UJenny, Unit 4B, Soweto. Please call before delivery.'
+  MISS  [isiZulu                / form_field      ] 'UJenny'               in: 'Full Name: UJenny'
+  MISS  [isiZulu                / email_sig       ] 'UJenny'               in: 'Kind regards,\nUJenny\nSenior Consultant'
+  MISS  [isiZulu                / narrative_no_cue] 'UJenny'               in: 'UJenny arrived at the office around 9am and left the documents at reception.'
+  MISS  [isiZulu                / third_person    ] 'UJenny'               in: 'The parcel was collected by UJenny on Tuesday afternoon.'
+  MISS  [isiZulu                / cue_explicit    ] 'USiphelelo'           in: "Hi, my name is USiphelelo and I'd like to schedule an appointment for next week."
+  MISS  [isiZulu                / billing         ] 'USiphelelo'           in: 'Invoice #4471 billed to USiphelelo - payment overdue.'
+  MISS  [isiZulu                / address_attn    ] 'USiphelelo'           in: 'Attn: USiphelelo, Unit 4B, Soweto. Please call before delivery.'
+  MISS  [isiZulu                / form_field      ] 'USiphelelo'           in: 'Full Name: USiphelelo'
+  MISS  [isiZulu                / email_sig       ] 'USiphelelo'           in: 'Kind regards,\nUSiphelelo\nSenior Consultant'
+  MISS  [isiZulu                / narrative_no_cue] 'USiphelelo'           in: 'USiphelelo arrived at the office around 9am and left the documents at reception.'
+  MISS  [isiZulu                / third_person    ] 'USiphelelo'           in: 'The parcel was collected by USiphelelo on Tuesday afternoon.'
+  MISS  [isiZulu                / address_attn    ] 'Zuma'                 in: 'Attn: Zuma, Unit 4B, Soweto. Please call before delivery.'
+  MISS  [isiZulu                / email_sig       ] 'Zuma'                 in: 'Kind regards,\nZuma\nSenior Consultant'
+  MISS  [isiXhosa               / address_attn    ] 'Cikizwa'              in: 'Attn: Cikizwa, Unit 4B, Soweto. Please call before delivery.'
+  MISS  [isiXhosa               / email_sig       ] 'Cikizwa'              in: 'Kind regards,\nCikizwa\nSenior Consultant'
+  MISS  [isiXhosa               / address_attn    ] 'Cobus Dowry'          in: 'Attn: Cobus Dowry, Unit 4B, Soweto. Please call before delivery.'
+  MISS  [isiXhosa               / email_sig       ] 'David'                in: 'Kind regards,\nDavid\nSenior Consultant'
+  MISS  [isiXhosa               / address_attn    ] 'Diko'                 in: 'Attn: Diko, Unit 4B, Soweto. Please call before delivery.'
+  MISS  [isiXhosa               / email_sig       ] 'Diko'                 in: 'Kind regards,\nDiko\nSenior Consultant'
+  MISS  [isiXhosa               / address_attn    ] 'Gq Kobus Laubscher'   in: 'Attn: Gq Kobus Laubscher, Unit 4B, Soweto. Please call before delivery.'
+  MISS  [isiXhosa               / email_sig       ] 'Gq Kobus Laubscher'   in: 'Kind regards,\nGq Kobus Laubscher\nSenior Consultant'
+  MISS  [isiXhosa               / address_attn    ] 'Letsela'              in: 'Attn: Letsela, Unit 4B, Soweto. Please call before delivery.'
+  MISS  [isiXhosa               / email_sig       ] 'Letsela'              in: 'Kind regards,\nLetsela\nSenior Consultant'
+  MISS  [isiXhosa               / address_attn    ] 'Manene'               in: 'Attn: Manene, Unit 4B, Soweto. Please call before delivery.'
+  MISS  [isiXhosa               / email_sig       ] 'Manene'               in: 'Kind regards,\nManene\nSenior Consultant'
+  MISS  [isiXhosa               / address_attn    ] 'Mbidlana'             in: 'Attn: Mbidlana, Unit 4B, Soweto. Please call before delivery.'
+  MISS  [isiXhosa               / email_sig       ] 'Mbidlana'             in: 'Kind regards,\nMbidlana\nSenior Consultant'
+  MISS  [isiXhosa               / address_attn    ] 'Mfene'                in: 'Attn: Mfene, Unit 4B, Soweto. Please call before delivery.'
+  MISS  [isiXhosa               / email_sig       ] 'Mfene'                in: 'Kind regards,\nMfene\nSenior Consultant'
+  MISS  [isiXhosa               / address_attn    ] 'Mhinki'               in: 'Attn: Mhinki, Unit 4B, Soweto. Please call before delivery.'
+  MISS  [isiXhosa               / email_sig       ] 'Mhinki'               in: 'Kind regards,\nMhinki\nSenior Consultant'
+  MISS  [isiXhosa               / address_attn    ] 'Mhlakaza'             in: 'Attn: Mhlakaza, Unit 4B, Soweto. Please call before delivery.'
+  MISS  [isiXhosa               / email_sig       ] 'Mhlakaza'             in: 'Kind regards,\nMhlakaza\nSenior Consultant'
+  MISS  [isiXhosa               / address_attn    ] 'Mhle'                 in: 'Attn: Mhle, Unit 4B, Soweto. Please call before delivery.'
+  MISS  [isiXhosa               / email_sig       ] 'Mhle'                 in: 'Kind regards,\nMhle\nSenior Consultant'
+  MISS  [isiXhosa               / address_attn    ] 'Moss Malo'            in: 'Attn: Moss Malo, Unit 4B, Soweto. Please call before delivery.'
+  MISS  [isiXhosa               / address_attn    ] 'Mpinda'               in: 'Attn: Mpinda, Unit 4B, Soweto. Please call before delivery.'
+  MISS  [isiXhosa               / email_sig       ] 'Mpinda'               in: 'Kind regards,\nMpinda\nSenior Consultant'
+  MISS  [isiXhosa               / address_attn    ] 'Mthembu'              in: 'Attn: Mthembu, Unit 4B, Soweto. Please call before delivery.'
+  MISS  [isiXhosa               / email_sig       ] 'Mthembu'              in: 'Kind regards,\nMthembu\nSenior Consultant'
+  MISS  [isiXhosa               / email_sig       ] 'NdinguZizamele Dlamini' in: 'Kind regards,\nNdinguZizamele Dlamini\nSenior Consultant'
+  MISS  [isiXhosa               / address_attn    ] 'NguLungile Malo'      in: 'Attn: NguLungile Malo, Unit 4B, Soweto. Please call before delivery.'
+  MISS  [isiXhosa               / email_sig       ] 'NguLungile Malo'      in: 'Kind regards,\nNguLungile Malo\nSenior Consultant'
+  MISS  [isiXhosa               / address_attn    ] 'Ngxabalazile'         in: 'Attn: Ngxabalazile, Unit 4B, Soweto. Please call before delivery.'
+  MISS  [isiXhosa               / address_attn    ] 'Nkambula'             in: 'Attn: Nkambula, Unit 4B, Soweto. Please call before delivery.'
+  MISS  [isiXhosa               / email_sig       ] 'Nkambula'             in: 'Kind regards,\nNkambula\nSenior Consultant'
+  MISS  [isiXhosa               / address_attn    ] 'Nobani'               in: 'Attn: Nobani, Unit 4B, Soweto. Please call before delivery.'
+  MISS  [isiXhosa               / address_attn    ] 'Ramakhosi'            in: 'Attn: Ramakhosi, Unit 4B, Soweto. Please call before delivery.'
+  MISS  [isiXhosa               / email_sig       ] 'Ramakhosi'            in: 'Kind regards,\nRamakhosi\nSenior Consultant'
+  MISS  [isiXhosa               / address_attn    ] 'Sello Lesupi'         in: 'Attn: Sello Lesupi, Unit 4B, Soweto. Please call before delivery.'
+  MISS  [isiXhosa               / address_attn    ] 'Tambo'                in: 'Attn: Tambo, Unit 4B, Soweto. Please call before delivery.'
+  MISS  [isiXhosa               / address_attn    ] 'Thixo'                in: 'Attn: Thixo, Unit 4B, Soweto. Please call before delivery.'
+  MISS  [isiXhosa               / email_sig       ] 'Thixo'                in: 'Kind regards,\nThixo\nSenior Consultant'
+  MISS  [isiXhosa               / email_sig       ] 'UAndrew Makenete'     in: 'Kind regards,\nUAndrew Makenete\nSenior Consultant'
+  MISS  [isiXhosa               / address_attn    ] 'UNontle'              in: 'Attn: UNontle, Unit 4B, Soweto. Please call before delivery.'
+  MISS  [isiXhosa               / email_sig       ] 'UNontle'              in: 'Kind regards,\nUNontle\nSenior Consultant'
+  MISS  [isiXhosa               / address_attn    ] 'VakaDe'               in: 'Attn: VakaDe, Unit 4B, Soweto. Please call before delivery.'
+  MISS  [isiXhosa               / email_sig       ] 'VakaDe'               in: 'Kind regards,\nVakaDe\nSenior Consultant'
+  MISS  [isiXhosa               / address_attn    ] 'Willemse'             in: 'Attn: Willemse, Unit 4B, Soweto. Please call before delivery.'
+  MISS  [isiXhosa               / email_sig       ] 'Willemse'             in: 'Kind regards,\nWillemse\nSenior Consultant'
+  MISS  [isiXhosa               / address_attn    ] 'Zi'                   in: 'Attn: Zi, Unit 4B, Soweto. Please call before delivery.'
+  MISS  [isiXhosa               / email_sig       ] 'Zi'                   in: 'Kind regards,\nZi\nSenior Consultant'
+  MISS  [isiXhosa               / address_attn    ] 'Zinzo'                in: 'Attn: Zinzo, Unit 4B, Soweto. Please call before delivery.'
+  MISS  [isiXhosa               / email_sig       ] 'Zinzo'                in: 'Kind regards,\nZinzo\nSenior Consultant'
+  MISS  [isiXhosa               / address_attn    ] 'Zizamele'             in: 'Attn: Zizamele, Unit 4B, Soweto. Please call before delivery.'
+  MISS  [isiXhosa               / email_sig       ] 'Zizamele'             in: 'Kind regards,\nZizamele\nSenior Consultant'
+  MISS  [isiXhosa               / address_attn    ] 'de Klerk'             in: 'Attn: de Klerk, Unit 4B, Soweto. Please call before delivery.'
+  MISS  [Sesotho_Setswana       / address_attn    ] 'Batho'                in: 'Attn: Batho, Unit 4B, Soweto. Please call before delivery.'
+  MISS  [Sesotho_Setswana       / address_attn    ] 'Blaauw'               in: 'Attn: Blaauw, Unit 4B, Soweto. Please call before delivery.'
+  MISS  [Sesotho_Setswana       / email_sig       ] 'Blaauw'               in: 'Kind regards,\nBlaauw\nSenior Consultant'
+  MISS  [Sesotho_Setswana       / address_attn    ] 'De la Rey'            in: 'Attn: De la Rey, Unit 4B, Soweto. Please call before delivery.'
+  MISS  [Sesotho_Setswana       / email_sig       ] 'De la Rey'            in: 'Kind regards,\nDe la Rey\nSenior Consultant'
+  MISS  [Sesotho_Setswana       / address_attn    ] 'Diepollo'             in: 'Attn: Diepollo, Unit 4B, Soweto. Please call before delivery.'
+  MISS  [Sesotho_Setswana       / email_sig       ] 'Diepollo'             in: 'Kind regards,\nDiepollo\nSenior Consultant'
+  MISS  [Sesotho_Setswana       / email_sig       ] 'John Peter'           in: 'Kind regards,\nJohn Peter\nSenior Consultant'
+  MISS  [Sesotho_Setswana       / address_attn    ] 'Jonase'               in: 'Attn: Jonase, Unit 4B, Soweto. Please call before delivery.'
+  MISS  [Sesotho_Setswana       / email_sig       ] 'Jonase'               in: 'Kind regards,\nJonase\nSenior Consultant'
+  MISS  [Sesotho_Setswana       / address_attn    ] 'Kotopi'               in: 'Attn: Kotopi, Unit 4B, Soweto. Please call before delivery.'
+  MISS  [Sesotho_Setswana       / email_sig       ] 'Kotopi'               in: 'Kind regards,\nKotopi\nSenior Consultant'
+  MISS  [Sesotho_Setswana       / address_attn    ] 'Lakabane'             in: 'Attn: Lakabane, Unit 4B, Soweto. Please call before delivery.'
+  MISS  [Sesotho_Setswana       / address_attn    ] 'Mabila'               in: 'Attn: Mabila, Unit 4B, Soweto. Please call before delivery.'
+  MISS  [Sesotho_Setswana       / email_sig       ] 'Mabila'               in: 'Kind regards,\nMabila\nSenior Consultant'
+  MISS  [Sesotho_Setswana       / address_attn    ] 'Makgowa'              in: 'Attn: Makgowa, Unit 4B, Soweto. Please call before delivery.'
+  MISS  [Sesotho_Setswana       / address_attn    ] 'Malaza'               in: 'Attn: Malaza, Unit 4B, Soweto. Please call before delivery.'
+  MISS  [Sesotho_Setswana       / email_sig       ] 'Malaza'               in: 'Kind regards,\nMalaza\nSenior Consultant'
+  MISS  [Sesotho_Setswana       / address_attn    ] 'Mmamotia'             in: 'Attn: Mmamotia, Unit 4B, Soweto. Please call before delivery.'
+  MISS  [Sesotho_Setswana       / email_sig       ] 'Mmamotia'             in: 'Kind regards,\nMmamotia\nSenior Consultant'
+  MISS  [Sesotho_Setswana       / address_attn    ] 'Mohlakeng'            in: 'Attn: Mohlakeng, Unit 4B, Soweto. Please call before delivery.'
+  MISS  [Sesotho_Setswana       / email_sig       ] 'Mohlakeng'            in: 'Kind regards,\nMohlakeng\nSenior Consultant'
+  MISS  [Sesotho_Setswana       / address_attn    ] 'Mor FW de Klerk'      in: 'Attn: Mor FW de Klerk, Unit 4B, Soweto. Please call before delivery.'
+  MISS  [Sesotho_Setswana       / address_attn    ] 'Mor.H Motara'         in: 'Attn: Mor.H Motara, Unit 4B, Soweto. Please call before delivery.'
+  MISS  [Sesotho_Setswana       / email_sig       ] 'Mor.H Motara'         in: 'Kind regards,\nMor.H Motara\nSenior Consultant'
+  MISS  [Sesotho_Setswana       / address_attn    ] 'Nobutlhe'             in: 'Attn: Nobutlhe, Unit 4B, Soweto. Please call before delivery.'
+  MISS  [Sesotho_Setswana       / email_sig       ] 'Nobutlhe'             in: 'Kind regards,\nNobutlhe\nSenior Consultant'
+  MISS  [Sesotho_Setswana       / address_attn    ] 'Ntate'                in: 'Attn: Ntate, Unit 4B, Soweto. Please call before delivery.'
+  MISS  [Sesotho_Setswana       / email_sig       ] 'Ntate'                in: 'Kind regards,\nNtate\nSenior Consultant'
+  MISS  [Sesotho_Setswana       / address_attn    ] 'Palesa Lebajwa'       in: 'Attn: Palesa Lebajwa, Unit 4B, Soweto. Please call before delivery.'
+  MISS  [Sesotho_Setswana       / address_attn    ] 'Rabophelo'            in: 'Attn: Rabophelo, Unit 4B, Soweto. Please call before delivery.'
+  MISS  [Sesotho_Setswana       / email_sig       ] 'Rabophelo'            in: 'Kind regards,\nRabophelo\nSenior Consultant'
+  MISS  [Sesotho_Setswana       / address_attn    ] 'Ramautla'             in: 'Attn: Ramautla, Unit 4B, Soweto. Please call before delivery.'
+  MISS  [Sesotho_Setswana       / address_attn    ] 'Roscher Maritz'       in: 'Attn: Roscher Maritz, Unit 4B, Soweto. Please call before delivery.'
+  MISS  [Sesotho_Setswana       / email_sig       ] 'Roscher Maritz'       in: 'Kind regards,\nRoscher Maritz\nSenior Consultant'
+  MISS  [Sesotho_Setswana       / address_attn    ] 'Rre Moss Malo'        in: 'Attn: Rre Moss Malo, Unit 4B, Soweto. Please call before delivery.'
+  MISS  [Sesotho_Setswana       / address_attn    ] 'Sepikara'             in: 'Attn: Sepikara, Unit 4B, Soweto. Please call before delivery.'
+  MISS  [Sesotho_Setswana       / email_sig       ] 'Sepikara'             in: 'Kind regards,\nSepikara\nSenior Consultant'
+  MISS  [Sesotho_Setswana       / address_attn    ] 'Setho sa Parliament'  in: 'Attn: Setho sa Parliament, Unit 4B, Soweto. Please call before delivery.'
+  MISS  [Sesotho_Setswana       / email_sig       ] 'Setho sa Parliament'  in: 'Kind regards,\nSetho sa Parliament\nSenior Consultant'
+  MISS  [Sesotho_Setswana       / address_attn    ] 'Suzman'               in: 'Attn: Suzman, Unit 4B, Soweto. Please call before delivery.'
+  MISS  [Sesotho_Setswana       / email_sig       ] 'Suzman'               in: 'Kind regards,\nSuzman\nSenior Consultant'
+  MISS  [Tshivenda_Xitsonga     / address_attn    ] 'Gumede'               in: 'Attn: Gumede, Unit 4B, Soweto. Please call before delivery.'
+  MISS  [Tshivenda_Xitsonga     / email_sig       ] 'Gumede'               in: 'Kind regards,\nGumede\nSenior Consultant'
+  MISS  [Tshivenda_Xitsonga     / address_attn    ] 'Maluleka'             in: 'Attn: Maluleka, Unit 4B, Soweto. Please call before delivery.'
+  MISS  [Tshivenda_Xitsonga     / email_sig       ] 'Maluleka'             in: 'Kind regards,\nMaluleka\nSenior Consultant'
+  MISS  [Tshivenda_Xitsonga     / address_attn    ] 'Nhlakanipho Gumede'   in: 'Attn: Nhlakanipho Gumede, Unit 4B, Soweto. Please call before delivery.'
+  MISS  [Tshivenda_Xitsonga     / address_attn    ] 'Ofentse Shakung'      in: 'Attn: Ofentse Shakung, Unit 4B, Soweto. Please call before delivery.'
+  MISS  [Afrikaans              / address_attn    ] 'Anta'                 in: 'Attn: Anta, Unit 4B, Soweto. Please call before delivery.'
+  MISS  [Afrikaans              / address_attn    ] 'Carools Reinecke'     in: 'Attn: Carools Reinecke, Unit 4B, Soweto. Please call before delivery.'
+  MISS  [Afrikaans              / email_sig       ] 'Carools Reinecke'     in: 'Kind regards,\nCarools Reinecke\nSenior Consultant'
+  MISS  [Afrikaans              / address_attn    ] 'Diepsloot Stud'       in: 'Attn: Diepsloot Stud, Unit 4B, Soweto. Please call before delivery.'
+  MISS  [Afrikaans              / email_sig       ] 'Diepsloot Stud'       in: 'Kind regards,\nDiepsloot Stud\nSenior Consultant'
+  MISS  [Afrikaans              / address_attn    ] 'Johannes'             in: 'Attn: Johannes, Unit 4B, Soweto. Please call before delivery.'
+  MISS  [Afrikaans              / email_sig       ] 'Johannes'             in: 'Kind regards,\nJohannes\nSenior Consultant'
+  MISS  [Afrikaans              / address_attn    ] 'Kanselier'            in: 'Attn: Kanselier, Unit 4B, Soweto. Please call before delivery.'
+  MISS  [Afrikaans              / address_attn    ] 'Kaptein'              in: 'Attn: Kaptein, Unit 4B, Soweto. Please call before delivery.'
+  MISS  [Afrikaans              / address_attn    ] 'Klerk'                in: 'Attn: Klerk, Unit 4B, Soweto. Please call before delivery.'
+  MISS  [Afrikaans              / address_attn    ] 'Malebatsi'            in: 'Attn: Malebatsi, Unit 4B, Soweto. Please call before delivery.'
+  MISS  [Afrikaans              / email_sig       ] 'Malebatsi'            in: 'Kind regards,\nMalebatsi\nSenior Consultant'
+  MISS  [Afrikaans              / email_sig       ] 'Marie'                in: 'Kind regards,\nMarie\nSenior Consultant'
+  MISS  [Afrikaans              / address_attn    ] 'Marina'               in: 'Attn: Marina, Unit 4B, Soweto. Please call before delivery.'
+  MISS  [Afrikaans              / email_sig       ] 'Marina'               in: 'Kind regards,\nMarina\nSenior Consultant'
+  MISS  [Afrikaans              / address_attn    ] 'Me Coetzee'           in: 'Attn: Me Coetzee, Unit 4B, Soweto. Please call before delivery.'
+  MISS  [Afrikaans              / email_sig       ] 'Me Coetzee'           in: 'Kind regards,\nMe Coetzee\nSenior Consultant'
+  MISS  [Afrikaans              / address_attn    ] 'Monde Mkalipi'        in: 'Attn: Monde Mkalipi, Unit 4B, Soweto. Please call before delivery.'
+  MISS  [Afrikaans              / address_attn    ] 'Ntsime'               in: 'Attn: Ntsime, Unit 4B, Soweto. Please call before delivery.'
+  MISS  [Afrikaans              / email_sig       ] 'Ntsime'               in: 'Kind regards,\nNtsime\nSenior Consultant'
+  MISS  [Afrikaans              / address_attn    ] 'Phillip'              in: 'Attn: Phillip, Unit 4B, Soweto. Please call before delivery.'
+  MISS  [Afrikaans              / address_attn    ] 'Prokureur-Generaal'   in: 'Attn: Prokureur-Generaal, Unit 4B, Soweto. Please call before delivery.'
+  MISS  [Afrikaans              / form_field      ] 'Prokureur-Generaal'   in: 'Full Name: Prokureur-Generaal'
+  MISS  [Afrikaans              / email_sig       ] 'Prokureur-Generaal'   in: 'Kind regards,\nProkureur-Generaal\nSenior Consultant'
+  MISS  [Afrikaans              / address_attn    ] 'Samuel'               in: 'Attn: Samuel, Unit 4B, Soweto. Please call before delivery.'
+  MISS  [Afrikaans              / email_sig       ] 'Samuel'               in: 'Kind regards,\nSamuel\nSenior Consultant'
+  MISS  [Afrikaans              / address_attn    ] 'Speurder Sersant Coetzee' in: 'Attn: Speurder Sersant Coetzee, Unit 4B, Soweto. Please call before delivery.'
+  MISS  [Afrikaans              / email_sig       ] 'Speurder Sersant Coetzee' in: 'Kind regards,\nSpeurder Sersant Coetzee\nSenior Consultant'
+  MISS  [Afrikaans              / address_attn    ] 'Spokie'               in: 'Attn: Spokie, Unit 4B, Soweto. Please call before delivery.'
+  MISS  [Afrikaans              / email_sig       ] 'Spokie'               in: 'Kind regards,\nSpokie\nSenior Consultant'
+  MISS  [Afrikaans              / address_attn    ] 'Streekbestuurder'     in: 'Attn: Streekbestuurder, Unit 4B, Soweto. Please call before delivery.'
+  MISS  [Afrikaans              / form_field      ] 'Streekbestuurder'     in: 'Full Name: Streekbestuurder'
+  MISS  [Afrikaans              / email_sig       ] 'Streekbestuurder'     in: 'Kind regards,\nStreekbestuurder\nSenior Consultant'
+  MISS  [Afrikaans              / cue_explicit    ] "Uys.'n"               in: "Hi, my name is Uys.'n and I'd like to schedule an appointment for next week."
+  MISS  [Afrikaans              / address_attn    ] "Uys.'n"               in: "Attn: Uys.'n, Unit 4B, Soweto. Please call before delivery."
+  MISS  [Afrikaans              / form_field      ] "Uys.'n"               in: "Full Name: Uys.'n"
+  MISS  [Afrikaans              / email_sig       ] "Uys.'n"               in: "Kind regards,\nUys.'n\nSenior Consultant"
+  MISS  [Afrikaans              / narrative_no_cue] "Uys.'n"               in: "Uys.'n arrived at the office around 9am and left the documents at reception."
+  MISS  [Afrikaans              / third_person    ] "Uys.'n"               in: "The parcel was collected by Uys.'n on Tuesday afternoon."
+  MISS  [Afrikaans              / address_attn    ] 'Yifu'                 in: 'Attn: Yifu, Unit 4B, Soweto. Please call before delivery.'
+  MISS  [Afrikaans              / email_sig       ] 'Yifu'                 in: 'Kind regards,\nYifu\nSenior Consultant'
+  MISS  [Western_control        / address_attn    ] 'Bomarr'               in: 'Attn: Bomarr, Unit 4B, Soweto. Please call before delivery.'
+  MISS  [Western_control        / email_sig       ] 'Bomarr'               in: 'Kind regards,\nBomarr\nSenior Consultant'
+  MISS  [Western_control        / email_sig       ] 'Cool Papa Bell'       in: 'Kind regards,\nCool Papa Bell\nSenior Consultant'
+  MISS  [Western_control        / email_sig       ] 'Dennis Bergkamp'      in: 'Kind regards,\nDennis Bergkamp\nSenior Consultant'
+  MISS  [Western_control        / address_attn    ] 'Faye Dunaway'         in: 'Attn: Faye Dunaway, Unit 4B, Soweto. Please call before delivery.'
+  MISS  [Western_control        / address_attn    ] 'MC Hammer'            in: 'Attn: MC Hammer, Unit 4B, Soweto. Please call before delivery.'
+  MISS  [Western_control        / email_sig       ] 'MC Hammer'            in: 'Kind regards,\nMC Hammer\nSenior Consultant'
+  MISS  [Western_control        / email_sig       ] 'Stephen'              in: 'Kind regards,\nStephen\nSenior Consultant'
+
+Overall: 1274/1491 (85.4%) recall, 1236/1491 exact-span
